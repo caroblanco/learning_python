@@ -12,7 +12,7 @@ greet("Brisa", "Vite")
 
 get_greeting("Caro")
 
-# KEYWORD ARGUMENTS
+# KEYWORD ARGUMENTS 
 def increment(number,by):
     return number + by
 
@@ -45,6 +45,6 @@ def save_user(**user):
     print(user)             # = {'id': 1, 'name': john, 'age': 22} -> DICTIONARY
     print(user["name"])     # = john 
 
-save_user(id=1, name="john", age = 22)
+save_user(id=1, name="john", age = 22)  # -> then the order of the arguments doesnt matter
 
 # SCOPE: region of the code where a variable is defined

@@ -69,6 +69,12 @@ for i in range(1,4):  # i starts in 1
 for i in range(1,10,2):  # i starts in 1, 2 is the steps, so i = 1 ,3, 5, 7, 9 (se saltea del 1 al 10 cada dos nums)
     print("attempt", i) 
 
+for i in "python":  # each iteration will be after each character of the string
+    print(i)
+
+for i in [1,2,3,4]:  # each iteration will be after each object in the list
+    print(i)
+
 # FOR... ELSE
 successful = True
 for i in range(3):
@@ -82,14 +88,7 @@ else:                                           # the else block executes if the
 # NESTED LOOPS
 for i in range(5):
     for j in range(3):
-        print(f"({i}),({j})")
-
-# ITERABLES
-for i in "python":  # each iteration will be after each character of the string
-    print(i)
-
-for i in [1,2,3,4]:  # each iteration will be after each object in the list
-    print(i)
+        print(f"({i},{j})")
 
 # WHILE LOOPS
 number = 100

@@ -42,7 +42,7 @@ numbers.append(5)
 numbers.insert(0,0) # list.insert(index,smth)
 
 # REMOVING ITEMS
-# at the end
+# at the end, removes the last item
 numbers.pop()
 
 # at a specific position
@@ -58,9 +58,14 @@ del numbers[0:3]
 numbers.clear()
 
 # FINDING OBJECTS
-numbers.index(1)    # returns the index of what you are looking for in the list
+numbers.index(1)    # returns the index of what you are looking for in the list (first occurance of what you are looking)
 
 numbers.count(1)    # returns the number of occurances given in the list
+
+x in list           # returns true or false if x is in the list
+
+# copy
+list2 = list1.copy()
 
 # SORTING LISTS
 numbers2 = [62,2,13,0]
@@ -69,6 +74,18 @@ numbers2.sort(reverse = True)
 
 sorted(numbers) #CREATES A NEW LIST
 sorted(numbers, reverse=True)
+
+# TUPLES
+
+numbers = (1,2,3,4)
+#we CANT change a tuple, only get info about it
+
+numbers[0]
+
+#UNPACKING TUPLES
+coordinates=(1,2,3)
+x,y,z = coordinates # its the same as x=coordinates[0] y=coordinates[1] z=coordinates[2]
+
 
 # LAMBDAS
 items = [
@@ -83,3 +100,26 @@ items.sort(key=lambda item:item[1])        #lambda parameters:expression
 #      return item[1]
 
 # MAP FUNCTION
+
+#DICTIONARIES
+customer = {
+    "name" = "Caro",
+    "age"=21
+}
+
+#to access
+customer["name"] #returns de info of that key => dictionary[key]
+
+#ex
+message = input(">")
+split_message = message.split(' ')
+
+emojis ={
+    ":)" = ":D",
+    ":(" = ":P"
+}
+output =""
+for word in split_message:
+    output += emojis.get(word, word) + " "
+
+print(output)
